@@ -1,0 +1,458 @@
+/* Setup */
+
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Setup End */
+
+/* Secondary Setup */
+
+.content-outline {
+    width: 60%;
+    margin: auto;
+}
+
+.dashboard-content-outline {
+    width: 85%;
+    margin: auto;
+}
+
+/* Secondary Setup End */
+
+/* Header and logo */
+
+.header-logo-banner {
+    width: 100%;
+    padding: 15px 20px;
+    color: white;
+    background: black;
+}
+
+.logo-banner-left {
+    float: left;
+    width: 49%;
+}
+
+.logo-banner-right {
+    float: right;
+    width: 49%;
+}
+
+.header-logo-banner h4 {
+    text-align: right;
+}
+
+.dashboard-header {
+    width: 100%;
+}
+
+.dash-header-left {
+    width: 49%;
+    float: left;
+    text-align: left;
+}
+
+.dash-header-right {
+    width: 49%;
+    float: right;
+}
+
+/* Header and logo end */
+
+/* Navigation Bar */
+
+.nav-bar-background {
+    background: #00AEFF
+}
+
+ul.topnav li a {
+    text-align: center
+}
+
+ul.topnav {
+    overflow: hidden
+}
+
+.topnav {
+    margin: auto
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul.topnav li {
+    float: left
+}
+
+ul.topnav li a {
+    display: inline-block;
+    height: 50px;
+    min-width: 75px;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12.4px;
+    letter-spacing: .7px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: color .3s ease
+}
+
+.alignmentTwo {
+    margin: auto;
+    width: 423px
+}
+
+ul.topnav li a:hover {
+    color: #9099a2
+}
+
+ul.topnav li.icon {
+    display: none
+}
+
+@media screen and (max-width:1024px) {
+    ul.topnav li:not(first-child) {
+        display: none
+    }
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block
+    }
+    .alignmentTwo {
+        background-color: #111;
+        width: 100%
+    }
+    ul.topnav.responsive {
+        position: relative
+    }
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+    ul.topnav.responsive li {
+        float: none;
+        display: inline
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left
+    }
+    ul.topnav li a {
+        background-color: #111;
+        color: #fff
+    }
+}
+
+@media screen and (max-width:1024px) {
+    ul.topnav li:not(first-child) {
+        display: none
+    }
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block
+    }
+    .alignmentTwo {
+        background-color: #111;
+        width: 100%
+    }
+    ul.topnav li a {
+        background-color: #111;
+        color: #fff
+    }
+    ul.topnav.responsive {
+        position: relative
+    }
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+    ul.topnav.responsive li {
+        float: none;
+        display: inline
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left
+    }
+}
+
+/*Navigation Bar End*/
+
+/* Advert Banner */
+
+.advert-banner {
+    background: #EAEAEA;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.advert-banner h2 {
+    color: #6BAC56;
+    font-size: 30px;
+    margin: 0;
+}
+
+.advert-banner h3 {
+    font-weight: 100;
+    font-size: 28px;
+    margin: 0;
+}
+
+/*button*/
+
+.free-signup-button {
+    background: #6BAC56;
+    padding: 15px 25px;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border-radius: 6px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.free-signup-button:hover {
+    transition: all ease-in-out .3s;
+    background: #4C793E;
+    cursor: pointer;
+}
+
+.dashboard-project {
+    float: right;
+    padding: 10px 20px !important;
+}
+
+.main-area-align h2 {
+    text-align: center;
+}
+
+.title-hr {
+    width: 50%;
+}
+
+/* Main info section */
+
+.main-info-outer {
+    width: 100%;
+}
+
+.info-img {
+    float: left;
+    width: 49%;
+}
+
+.info-img img {
+    width: 100%;
+}
+
+.info-text {
+    float: right;
+    width: 49%;
+}
+
+.info-text p {
+    width: 100%;
+    margin: auto;
+}
+
+.signup-h2 {
+    color: #6BAC56;
+    font-size: 30px;
+    margin: 0;
+}
+
+/* Main info section end */
+
+/* Form */
+
+form.signup-form {
+    width: 30%;
+    margin: auto;
+}
+
+form.signup-form input {
+    width: 100%;
+    margin: auto;
+    border: 2px solid #6BAC56;
+    color: black;
+    font-weight: 200;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+form.signup-form textarea {
+    width: 100%;
+    margin: auto;
+    border: 2px solid #6BAC56;
+    color: black;
+    font-weight: 200;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.submit-form {
+    background: #6BAC56;
+    color: white !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+
+.submit-form:hover {
+    transition: all ease-in-out .3s;
+    background: #4C793E;
+    border-color: #4C793E;
+    cursor: pointer;
+}
+
+nobr {
+    text-align: left;
+}
+
+#remember {
+    width: 20px;
+}
+
+.welcome-text {
+    text-align: left !important;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.dash-header-right h2 {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.projects-table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+}
+
+.projects-table th {
+    border-bottom: 2px solid black;
+    padding: 15px 10px;
+}
+
+/* Projects table */
+
+.projects-table {
+    width: 100%;
+    font-weight: 300;
+}
+
+.projects-table th,
+.projects-table td {
+    width: 14%;
+    text-align: center;
+}
+
+.delete-btn {
+    color: white;
+    font-weight: 400;
+    background: #bd5b5b;
+    padding: 7.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #773b3b;
+    transition: .3s;
+}
+
+.add-time-btn {
+    padding: 7.5px;
+    width: 33px;
+    background: blue;
+    border-radius: 5px;
+    color: white;
+    margin: auto;
+}
+
+.add-time-btn:hover {
+    transition: .3s;
+    background: darkblue;
+    cursor: pointer;
+}
+
+/*New project modal*/
+
+.new_project_modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.new_project_modal_content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+
+.new_project_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new_project_close:hover,
+.new_project_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*New project modal end*/
