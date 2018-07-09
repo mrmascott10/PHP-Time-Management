@@ -13,7 +13,7 @@ $sql = "SELECT * FROM users WHERE username='$username'";
 $result = mysqli_query($mysqli, $sql);
 // Counting amount of records
 $count = mysqli_num_rows($result);
-// If theres one record carry one
+// If theres one record carry on
 if ($count == 1) {
   // Convert DB result array into text
   while ($row = mysqli_fetch_array($result)) {
