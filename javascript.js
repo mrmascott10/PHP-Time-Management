@@ -1,17 +1,35 @@
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+script.type = 'text/javascript';
+
+
+// COMPLETED TASK START
+function compTask(id)  {
+    //Changing styling
+    if ($('#complete-' + id).prop('checked')) {
+        //document.getElementById('tr' + id).style.color = "green";
+        $("#tr"+id).css("color", "green");
+    } else {
+        //document.getElementById('tr' + id).style.color = "black";
+        $("#tr"+id).css("color", "black");
+    }
+}
+//COMPLETED TASK END
+
 // NEW PROJECT MODAL START
-var new_project_modal = document.getElementById('newProjectModal');
-var new_project_btn = document.getElementById("new_project_btn");
-var new_project_close = document.getElementsByClassName("new_project_close")[0];
-new_project_btn.onclick = function() {
-    new_project_modal.style.display = "block";
-}
-new_project_close.onclick = function() {
-    new_project_modal.style.display = "none";
-}
-    // new project modal ajax
+var new_project_btn = $("#new_project_btn");
+
+$("#newProjectModal").click(function() {
+    $(this).css("display", "block");
+});
+
+$(".new_project_close").click(function() {
+    $(this).css("display", "none");
+});
 // NEW PROJECT MODAL END
 
 // DELETE JOB START
+$(document).ready(function() {
         $(".delete-btn").click(function() {
             var jobId = $(this).attr('id');
             
@@ -28,16 +46,7 @@ new_project_close.onclick = function() {
         });
 // DELETE JOB END
         
-// COMPLETED TASK START
-        function compTask(id)  {
-            //Changing styling
-            if ($('#complete-' + id).prop('checked')) {
-                document.getElementById('tr' + id).style.color = "green";
-            } else {
-                document.getElementById('tr' + id).style.color = "black";
-            }
-        }
-//COMPLETED TASK END
+
     
 // PAID TASK START
         function paidTask(id) {
@@ -60,3 +69,4 @@ new_project_close.onclick = function() {
             }
         }
 //PAID TASK END
+    });

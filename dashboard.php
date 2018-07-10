@@ -118,7 +118,13 @@ include('db_connection.php');
                         <td>
                             <!-- Complete Checkbox -->
                             <!--TODO: change to be subtle circle with tick inside. hover turns it green-->
-                            <input type="checkbox" id="complete-<?php echo $row['id'];?>" onclick="compTask( '<?php echo $row['id']; ?>' );"> </td>
+                            <label class="container">
+                            <input type="checkbox" id='complete-<?php echo $row["id"];?>' onclick="compTask('<?php echo $row["id"]; ?>');">
+                            <span class="checkmark"></span>
+                            </label>
+
+
+                        </td>
                         <td>
                             <!-- Paid checkbox -->
                             <input type="checkbox" id="paid-<?php echo $row['id'];?>" onclick="paidTask( '<?php echo $row['id'];?>' );"> </td>
@@ -140,7 +146,7 @@ include('db_connection.php');
                             <div class="add-time-btn" id=""><i class="fa fa-plus"></i></div>
                         </td>
                         <td>
-                            <div class="delete-btn" id="<?php echo $row['id']; ?>">DELETE</div>
+                            <div class="delete-btn" id="<?php echo $row['id']; ?>"><div class="fa fa-trash"></div></div>
                         </td>
                     </tr>
                     <?php } ?>
@@ -171,5 +177,7 @@ include('db_connection.php');
         </div>
         <!--  NEW PROJECT MODAL END  -->
     </body>
-
+<script>
+    
+</script>
     </html>
