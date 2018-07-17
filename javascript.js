@@ -44,6 +44,7 @@ $(document).ready(function() {
                 }
             });
         });
+    });
 // DELETE JOB END
         
 
@@ -69,4 +70,4 @@ $(document).ready(function() {
             }
         }
 //PAID TASK END
-    });
+   

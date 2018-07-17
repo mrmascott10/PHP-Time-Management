@@ -17,11 +17,6 @@ include('db_connection.php');
     <body>
         <!-- Navigation bar -->
         <script>
-            $("div").click(function() {
-                window.location = $(this).find("a").attr("href");
-                return false;
-            });
-
             function myFunction() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
@@ -118,16 +113,30 @@ include('db_connection.php');
                         <td>
                             <!-- Complete Checkbox -->
                             <!--TODO: change to be subtle circle with tick inside. hover turns it green-->
-                            <label class="container">
-                            <input type="checkbox" id='complete-<?php echo $row["id"];?>' onclick="compTask('<?php echo $row["id"]; ?>');">
-                            <span class="checkmark"></span>
-                            </label>
-
-
+                            <div class="checkbox-outer">
+                            <label class="label">
+                            <input class="label__checkbox" type="checkbox" id='complete-<?php echo $row["id"];?>' onclick="compTask('<?php echo $row["id"]; ?>');">
+                            <span class="label__text">
+                                <span class="label__check">
+                                    <i class="fa fa-check icon"></i>
+                                </span>
+                            </span>
+                        </label>
+                        </div>
                         </td>
                         <td>
                             <!-- Paid checkbox -->
-                            <input type="checkbox" id="paid-<?php echo $row['id'];?>" onclick="paidTask( '<?php echo $row['id'];?>' );"> </td>
+                            <div class="checkbox-outer">
+                            <label class="label">
+                            <input class="label__checkbox" type="checkbox" id="paid-<?php echo $row['id'];?>" onclick="paidTask( '<?php echo $row['id'];?>' );">
+                            <span class="label__text">
+                                <span class="label__check">
+                                    <i class="fa fa-check icon"></i>
+                                </span>
+                            </span>
+                        </label>
+                        </div>
+                        </td>
                         <td>
                             <?php echo $row['project_title']; ?>
                         </td>
