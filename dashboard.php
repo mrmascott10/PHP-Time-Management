@@ -128,7 +128,7 @@ include('db_connection.php');
                             <!-- Paid checkbox -->
                             <div class="checkbox-outer">
                             <label class="label">
-                            <input class="label__checkbox" type="checkbox" id="paid-<?php echo $row['id'];?>" onclick="paidTask( '<?php echo $row['id'];?>' );">
+                            <input class="check label__checkbox" type="checkbox" id="paid-<?php echo $row['id'];?>" onclick="paidTask( '<?php echo $row['id'];?>' );">
                             <span class="label__text">
                                 <span class="label__check">
                                     <i class="fa fa-check icon"></i>
