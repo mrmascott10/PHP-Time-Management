@@ -70,6 +70,10 @@ $(document).ready(function() {
 
 $('.check').attr('disabled', true);
 
+if($('#paid-' + id).prop('checked') == false && $('#complete-' + id).prop('checked') == false) {
+    document.getElementById('tr' + id).style.color = "black";
+}
+
 function compTask(id) {
     //$('#tr-' + id).css("color", "green");
     document.getElementById('tr' + id).style.color = "green";
@@ -80,6 +84,5 @@ function compTask(id) {
 function paidTask(id) {    
     //$('#tr-' + id).css("color", "gray");
     document.getElementById('tr' + id).style.color = "gray";
-    if($('#paid'))
-
+    //if($('#paid-' + id).prop('checked') && $('#complete-' + id).) {}
 }

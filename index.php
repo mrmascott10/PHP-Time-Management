@@ -34,11 +34,11 @@
         <div class="nav-bar-background" id="top">
             <div class="alignmentTwo">
                 <ul class="topnav" id="myTopnav">
-                    <li><a href="http://www.tresna.co.uk/index.htm">HOME</a></li>
-                    <li><a href="http://www.tresna.co.uk/products.htm">SHOP</a></li>
-                    <li><a href="http://www.tresna.co.uk/blog/mikesblog.htm">BLOG</a></li>
-                    <li><a href="http://www.tresna.co.uk/aboutus.htm">ABOUT US</a></li>
-                    <li><a href="http://www.tresna.co.uk/getintouch.htm">CONTACT</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
                     <li class="icon"> <a href="javascript:void(0);" class="dropdown" onclick="myFunction()">Main Menu&nbsp;&nbsp;<em class="fa fa-bars"></em></a> </li>
                 </ul>
             </div>

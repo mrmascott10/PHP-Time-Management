@@ -76,7 +76,7 @@ body {
 /* Navigation Bar */
 
 .nav-bar-background {
-    background: #00AEFF
+    background: #272727;
 }
 
 ul.topnav li a {
@@ -116,7 +116,7 @@ ul.topnav li a {
 
 .alignmentTwo {
     margin: auto;
-    width: 423px
+    width: 375px
 }
 
 ul.topnav li a:hover {
@@ -376,16 +376,14 @@ table {
 }
 
 .delete-btn {
-    color: white;
-    font-weight: 400;
-    background: #bd5b5b;
     padding: 7.5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .delete-btn:hover {
-    background: #773b3b;
+    color: #888;
     transition: .3s;
 }
 

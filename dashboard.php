@@ -39,11 +39,11 @@ include('db_connection.php');
         <div class="nav-bar-background" id="top">
             <div class="alignmentTwo">
                 <ul class="topnav" id="myTopnav">
-                    <li><a href="http://www.tresna.co.uk/index.htm">HOME</a></li>
-                    <li><a href="http://www.tresna.co.uk/products.htm">SHOP</a></li>
-                    <li><a href="http://www.tresna.co.uk/blog/mikesblog.htm">BLOG</a></li>
-                    <li><a href="http://www.tresna.co.uk/aboutus.htm">ABOUT US</a></li>
-                    <li><a href="http://www.tresna.co.uk/getintouch.htm">CONTACT</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HOME</a></li>
                     <li class="icon"> <a href="javascript:void(0);" class="dropdown" onclick="myFunction()">Main Menu&nbsp;&nbsp;<em class="fa fa-bars"></em></a> </li>
                 </ul>
             </div>
@@ -55,6 +55,8 @@ include('db_connection.php');
                 </div>
                 <div class="dash-header-right">
                     <button class="free-signup-button dashboard-project" id="new_project_btn">NEW PROJECT</button>
+                    <a href="logout.php">Logout</a>
+                    <button href="logout.php" class="dashboard-project free-signup-button ">Log Out</button>
                 </div>
                 <div style="clear:both;"></div>
                 <hr>
@@ -161,7 +163,7 @@ include('db_connection.php');
                     <?php } ?>
                 </table>
             </div>
-        </div> <a href="logout.php">Logout</a>
+        </div>
 
 
         <!--    MODALS    -->
