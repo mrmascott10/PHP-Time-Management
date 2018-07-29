@@ -1,7 +1,3 @@
-var script = document.createElement('script');
-script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-script.type = 'text/javascript';
-
 // NEW PROJECT MODAL START
 var new_project_btn = $("#new_project_btn");
 
@@ -68,21 +64,37 @@ $(document).ready(function() {
 //         }
 //PAID TASK END
 
-$('.check').attr('disabled', true);
+$('.check').attr('disabled', true); //  make checkbox disabled when page is started
 
-if($('#paid-' + id).prop('checked') == false && $('#complete-' + id).prop('checked') == false) {
-    document.getElementById('tr' + id).style.color = "black";
-}
 
-function compTask(id) {
-    //$('#tr-' + id).css("color", "green");
-    document.getElementById('tr' + id).style.color = "green";
-    $('#paid-' + id).attr('disabled', false);
-}
+// if($('#paid-' + id).prop('checked') == false && $('#complete-' + id).prop('checked') == false) {
+//     document.getElementById('tr' + id).style.color = "black";
+// }
+
+ function compTask(id) {
+     
+     if($('#tr-' + id).css('color') === 'rgb(0, 0, 0)') { //    black
+         $('#tr-' + id).css("color", "rgb(39, 134, 39)"); //    green
+     } else if ($('#tr-' + id).css('color') === 'rgb(39, 134, 39)') {
+         $('#tr-' + id).css('color', 'rgb(0, 0, 0)');
+     } else if ($('#tr-' + id).css('color') === 'rgb(128, 128, 128)') { //  grey
+         $('#tr-' + id).css('color', 'rgb(0, 0, 0)');
+         $('#paid-' + id).prop('checked') == false;
+     }
+     
+     
+     $('#paid-' + id).attr('disabled', false);
+     
+     
+     //document.getElementById('tr' + id).style.color = "green";
+ }
 
 
 function paidTask(id) {    
-    //$('#tr-' + id).css("color", "gray");
-    document.getElementById('tr' + id).style.color = "gray";
-    //if($('#paid-' + id).prop('checked') && $('#complete-' + id).) {}
-}
+     //if($('#tr-' + id).css('color') === 'rgb(39, 134, 39)' && $('#complete-' + id).attr('checked') == true) {
+         $('#tr-' + id).css('color') === 'rgb(128, 128, 128)';
+     //}
+ }
+
+
+

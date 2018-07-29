@@ -9,7 +9,7 @@ include('db_connection.php');
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-        <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async src="javascript.js"></script>
         <title>Dashboard</title>
     </head>
@@ -109,9 +109,9 @@ include('db_connection.php');
                         }
                         $select_jobs_with_usrid = mysqli_query($mysqli, "SELECT * FROM jobs WHERE username_id = '$id_jobs' AND deleted = '0';");
                         while($row = mysqli_fetch_array($select_jobs_with_usrid)) {
-                            
                     ?>
-                    <tr id="tr<?php echo $row['id']; ?>">
+                    
+                    <tr id='tr-<?php echo $row["id"];?>'>
                         <td>
                             <!-- Complete Checkbox -->
                             <!--TODO: change to be subtle circle with tick inside. hover turns it green-->
@@ -189,6 +189,5 @@ include('db_connection.php');
         <!--  NEW PROJECT MODAL END  -->
     </body>
 <script>
-    
 </script>
     </html>
