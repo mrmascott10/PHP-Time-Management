@@ -2,6 +2,7 @@
 session_start();
 //Connect to database
 include 'db_connection.php';
+
 //Variables
 $name = Trim(stripslashes($_POST['name']));
 

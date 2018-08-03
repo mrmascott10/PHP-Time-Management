@@ -69,20 +69,22 @@
             <h2 class="signup-h2">SIGN UP</h2>
             <hr class="title-hr">
             <br>
-            <form action="signup.php" method="post" class="signup-form">
+            <form action="login-signup-php.php" method="post" class="signup-form">
                 <input type="text" name="name" id="name" placeholder="NAME" required />
                 <input type="text" name="email" id="email" placeholder="E-MAIL" required />
                 <input type="text" id="username" name="username" placeholder="USERNAME" required />
                 <input type="password" id="password" name="password" placeholder="PASSWORD" required />
+                <input type="hidden" value="signup" name="loginSignupVar"/>
                 <input type="submit" value="SUBMIT" class="submit-form" name="submit" /> </form>
         <br>
         <br>
         <h2 class="signup-h2">LOG IN</h2>
             <hr class="title-hr">
             <br>
-        <form class="signup-form" action="login.php" method="post">
+        <form class="signup-form" action="login-signup-php.php" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required/>
+            <input type="hidden" value="login" name="loginSignupVar" />
             <input type="submit" name="submit" value="Submit" class="submit-form" /> </form>
         </div>
         
