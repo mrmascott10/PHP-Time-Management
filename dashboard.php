@@ -55,9 +55,8 @@ include('db_connection.php');
                 </div>
                 <div class="dash-header-right">
                     <button class="free-signup-button dashboard-project" id="new_project_btn">NEW PROJECT</button>
-                    <a href="logout.php">Logout</a>
-                    <button href="logout.php" class="dashboard-project free-signup-button ">Log Out</button>
-                </div>
+                    <a href="logout.php"><div class="dashboard-project free-signup-button ">Log Out</div>
+                </div></a>
                 <div style="clear:both;"></div>
                 <hr>
                 <div class="dash-header-left">

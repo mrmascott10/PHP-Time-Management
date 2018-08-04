@@ -27,50 +27,11 @@ $(document).ready(function() {
             });
         });
     });
-// DELETE JOB END
-        
-// COMPLETED TASK START
-// function compTask(id)  {
-//     //Changing styling
-//     if ($('#complete-' + id).prop('checked')) {
-//         //document.getElementById('tr' + id).style.color = "green";
-//         $("#tr"+id).css("color", "green");
-//     } else {
-//         //document.getElementById('tr' + id).style.color = "black";
-//         $("#tr"+id).css("color", "black");
-//     }
-// }
-// //COMPLETED TASK END
-    
-// // PAID TASK START
-//         function paidTask(id) {
-//             // FUTURE: After selecting both then unselecting complete, paid stays selected.
-//             document.getElementById('complete-' + id).disabled = false;
-//             document.getElementById('paid-' + id).click(function () {
-//                 return false;
-//             });
-//             if ($('#complete-' + id).prop('checked')) {
-//                 document.getElementById('tr' + id).style.color = "green";
-//                 document.getElementById('paid-' + id).click(function () {
-//                     return true;
-//                 });
-//             }
-//             if ($('#paid-' + id).prop('checked') && $('#complete-' + id).prop('checked')) {
-//                 document.getElementById('tr' + id).style.color = "gray";
-//             }
-//             else {
-//                 document.getElementById('tr' + id).style.color = "black";
-//             }
-//         }
-//PAID TASK END
+
 
 $('.check').attr('disabled', true); //  make checkbox disabled when page is started
 
-
-// if($('#paid-' + id).prop('checked') == false && $('#complete-' + id).prop('checked') == false) {
-//     document.getElementById('tr' + id).style.color = "black";
-// }
-
+// COMPLETE TASK START
  function compTask(id) {
      
      if($('#tr-' + id).css('color') === 'rgb(0, 0, 0)') { //    black
@@ -82,19 +43,13 @@ $('.check').attr('disabled', true); //  make checkbox disabled when page is star
          $('#paid-' + id).prop('checked') == false;
      }
      
-     
      $('#paid-' + id).attr('disabled', false);
-     
-     
-     //document.getElementById('tr' + id).style.color = "green";
  }
+// COMPLETE TASK END
 
-
+// PAID TASK START
 function paidTask(id) {    
-     //if($('#tr-' + id).css('color') === 'rgb(39, 134, 39)' && $('#complete-' + id).attr('checked') == true) {
-         $('#tr-' + id).css('color') === 'rgb(128, 128, 128)';
-     //}
+    $('#tr-' + id).css("color", "rgb(128, 128, 128)");
+    // TODO: When complete and paid are checked and then paid is unchecked the colour needs to go back to green.
  }
-
-
-
+// PAID TASK END
