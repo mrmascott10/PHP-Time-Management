@@ -321,6 +321,12 @@ form.signup-form textarea {
     color: white !important;
     font-weight: 500 !important;
     cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #6BAC56;
+    font-size: 15px;
 }
 
 .submit-form:hover {
@@ -432,25 +438,49 @@ table {
 .new_project_modal_content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+/*  Modal Header  */
+
+.new_project_header {
+    background: #6BAC56;
+    padding: 15px;
+    width: 100%;
+}
+
+.new_project_header h2 {
+    margin: 0;
+    color: white;
 }
 
 /* The Close Button */
 
 .new_project_close {
-    color: #aaaaaa;
+    color: #ffffff;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 25px !important;
 }
 
-.new_project_close:hover,
-.new_project_close:focus {
-    color: #000;
+.new_project_close:hover {
+    color: #ccc;
     text-decoration: none;
     cursor: pointer;
+    transition: .3s;
+}
+
+.new_project_input {
+    border: 2px solid #6BAC56;
+    font-size: 15px;
+        color: #000;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    width: 100%;
 }
 
 /*New project modal end*/
@@ -662,3 +692,20 @@ table {
       opacity: 1;
     }
   }
+.new-project-form-outer {
+    width: 320px;
+    margin: auto;
+}
+
+.new_project_submit {
+    background: #6BAC56;
+    font-size: 15px;
+        color: #000;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    width: 100%;
+}

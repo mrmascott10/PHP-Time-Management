@@ -170,23 +170,26 @@ include('db_connection.php');
         <!--TODO: Make modal thinner-->
         <div id="newProjectModal" class="new_project_modal">
             <div class="new_project_modal_content">
-                <span class="new_project_close">&times;</span>
+               <div class="new_project_header">
+                <span class="new_project_close fa fa-times"></span>
+                <h2>Add a New Project</h2>
+                </div>
                 <!--FUTURE: change to ajax-->
-                <form action="timeManagementPHP.php" method="post" class="signup-form">
-                    Project Title <br>
-                    <input type="text" name="project_title" placeholder="Project Title"><br> Client Name <br>
-                    <input type="text" name="client_name" placeholder="Client Name"><br> Hourly Cost <br>
-                    <input type="text" name="cost_hour" placeholder="Hourly Cost"><br> Target Completion Date <br>
-                    <input type="text" rows="10" cols="10" name="completion_date" placeholder="Target Completion Date"><br> Time Spent Hrs <br>
-                    <input type="text" name="time_spent" placeholder="Time Spent Hrs"><br> Time Spent Mins <br>
-                    <input type="text" name="time_spent_min" placeholder="Time Spent Mins"><br> Project Description <br>
-                    <textarea type="text" name="description" placeholder="Project Description"></textarea>
-                    <input type="submit" value="ADD PROJECT" class="submit-form" name="submit">
-                </form>
+                   <div class="new-project-form-outer">
+                   <br>Project Title <br>
+                    <input type="text" name="project_title" placeholder="Project Title" id="project_title" class="new_project_input"><br> Client Name <br>
+                    <input type="text" name="client_name" placeholder="Client Name" id="client_name" class="new_project_input"><br> Hourly Cost <br>
+                    <input type="text" name="cost_hour" placeholder="Hourly Cost" id="cost_hour" class="new_project_input"><br> Target Completion Date <br>
+                    <input type="text" rows="10" cols="10" name="completion_date" placeholder="Target Completion Date" id="completion_date" class="new_project_input"><br> Time Spent Hrs <br>
+                    <input type="text" name="time_spent" placeholder="Time Spent Hrs" id="time_spent" class="new_project_input"><br> Time Spent Mins <br>
+                    <input type="text" name="time_spent_min" placeholder="Time Spent Mins" id="time_spent_min" class="new_project_input"><br> Project Description <br>
+                    <textarea type="text" name="description" placeholder="Project Description" id="new_proj_description" class="new_project_input"></textarea>
+                    <input type="hidden" value="new_project" name="new_project"/>
+                    <input type="submit" value="ADD PROJECT" class="submit-form" name="submit" id="new_project_submit" onclick="newProjectFunction()" class="new_project_submit">
+                    <br>
+                    </div>
             </div>
         </div>
         <!--  NEW PROJECT MODAL END  -->
     </body>
-<script>
-</script>
     </html>
