@@ -33,13 +33,8 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) && MYSQLI_NUM_ROWS($mysqli->query(
   //invalid email
   header("Location: index.php");
 }    
-
-
-
 } else if ($_POST['loginSignupVar'] == "login") {
-
-    
-    
+  
 // Variables taken from form
 // TODO: add mysqlirealescapestring
 $username = Trim(stripslashes($_POST['username']));
@@ -60,14 +55,11 @@ if ($count == 1) {
   }
   // Verifying password and username against database
   if (password_verify($password, $dbPass) && $username == $dbUsername) {
-    $_SESSION['login_user'] = $username;
+      $_SESSION['login_user'] = $username;
       $_SESSION['login_name'] = $name;
-    header("location: dashboard.php");
+      header("location: dashboard.php");
   } else {
-    header("location: index.php");
+      header("location: index.php");
   }
-}
-    
-    
-    
+}  
 }
