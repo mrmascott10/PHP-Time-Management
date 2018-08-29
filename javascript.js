@@ -8,6 +8,16 @@ $(".new_project_close").click(function () {
 });
 // NEW PROJECT MODAL END
 
+// ADD TIME MODAL START
+//$("#add_time_btn").click(function () {
+//    $('#newProjectModal').css("display", "block");
+//});
+//
+//$(".new_project_close").click(function () {
+//    $('#newProjectModal').css("display", "none");
+//});
+// ADD TIME MODAL END
+
 // DELETE JOB START
 $(document).ready(function () {
     $(".delete-btn").click(function () {
@@ -81,3 +91,14 @@ function newProjectFunction() {
     })
 }
 // ADD PROJECT END
+
+// ADD TIME START
+function addTimeFunction(data) {
+    var add_time_hours = $("add_time_hours").val();
+    var add_time_mins = $("add_time_mins").val();
+    $.ajax({
+       type: "POST",
+        url: "timeManagementPHP.php"
+    });
+}
+// ADD TIME END

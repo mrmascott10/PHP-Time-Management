@@ -229,6 +229,7 @@ ul.topnav li.icon {
     border-radius: 6px;
     font-size: 20px;
     margin: 10px;
+    border: none;
 }
 
 .free-signup-button:hover {
@@ -396,7 +397,7 @@ table {
 .add-time-btn {
     padding: 7.5px;
     width: 33px;
-    background: blue;
+    background: #6BAC56;
     border-radius: 5px;
     color: white;
     margin: auto;
@@ -404,7 +405,7 @@ table {
 
 .add-time-btn:hover {
     transition: .3s;
-    background: darkblue;
+    background: #4C793E;
     cursor: pointer;
 }
 
@@ -438,7 +439,6 @@ table {
 .new_project_modal_content {
     background-color: #fefefe;
     margin: auto;
-    border: 1px solid #888;
     width: 80%;
 }
 
@@ -599,7 +599,7 @@ table {
     margin: auto;
 }
 
-.fa-check {
+.fa-check, .fa-plus {
     color: #e8e9e8;
 }
   
