@@ -9,25 +9,48 @@ $(".new_project_close").click(function () {
 // NEW PROJECT MODAL END
 
 // ADD TIME MODAL START
-//$("#add_time_btn").click(function () {
-//    $('#newProjectModal').css("display", "block");
-//});
-//
-//$(".new_project_close").click(function () {
-//    $('#newProjectModal').css("display", "none");
-//});
+function addTime(id) {
+    $('#addTimeModal').css("display", "block");
+}
+
+$(".new_project_close").click(function () {
+   $('#addTimeModal').css("display", "none");
+});
+
+// ADD TIME START
+function addTimeFunction(data) {
+    var add_time_hours = $("add_time_hours").val();
+    var add_time_mins = $("add_time_mins").val();
+    var add_time_id = 
+    var addTimeVar = "addTimeVarSet";
+    $.ajax({
+       type: "POST",
+        url: "timeManagementPHP.php",
+        data: {
+            "add_time_hours": add_time_hours,
+            "add_time_mins": add_time_mins,
+            "addTimeVar": addTimeVar
+        },
+        success: function(data) {
+            // do things.
+        }
+    });
+}
+// ADD TIME END
 // ADD TIME MODAL END
 
 // DELETE JOB START
 $(document).ready(function () {
     $(".delete-btn").click(function () {
         var jobId = $(this).attr('id');
+        var deleteVar = "varSet";
 
         $.ajax({
             type: "POST",
             url: "timeManagementPHP.php",
             data: {
-                "jobId": jobId
+                "jobId": jobId,
+                "deleteVar": deleteVar
             },
             success: function (data) {
                 location.reload();
@@ -91,14 +114,3 @@ function newProjectFunction() {
     })
 }
 // ADD PROJECT END
-
-// ADD TIME START
-function addTimeFunction(data) {
-    var add_time_hours = $("add_time_hours").val();
-    var add_time_mins = $("add_time_mins").val();
-    $.ajax({
-       type: "POST",
-        url: "timeManagementPHP.php"
-    });
-}
-// ADD TIME END

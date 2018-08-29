@@ -395,17 +395,12 @@ table {
 }
 
 .add-time-btn {
-    padding: 7.5px;
-    width: 33px;
-    background: #6BAC56;
-    border-radius: 5px;
-    color: white;
-    margin: auto;
+    font-size: 20px;
 }
 
 .add-time-btn:hover {
+    color: #888;
     transition: .3s;
-    background: #4C793E;
     cursor: pointer;
 }
 
@@ -692,6 +687,7 @@ table {
       opacity: 1;
     }
   }
+  
 .new-project-form-outer {
     width: 320px;
     margin: auto;

@@ -10,6 +10,7 @@ include('db_connection.php');
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <script async src="javascript.js"></script>
         <title>Dashboard</title>
     </head>
@@ -100,7 +101,7 @@ include('db_connection.php');
                         <th>End Date</th>
                         <th>Hours Logged</th>
                         <th>Add Time</th>
-                        <th><i class="fa fa-trash"></i></th>
+                        <th><i class="far fa-trash-alt"></i></th>
                     </tr>
                     <?php 
                     // NOTE: complete, done and deleted -> if they are 0 then they're not true, if they're a 1 then they're true.
@@ -155,20 +156,11 @@ include('db_connection.php');
                         <td>
                             <!--TODO: Add modal for adding new time-->
                             <!--TODO: Change blue-->
-                            <div class="checkbox-outer">
-                                <label class="label">
-                            <input class="label__checkbox" type="checkbox" id="add-time-<?php echo $row['id'];?>" onclick="addTime( '<?php echo $row['id'];?>' );">
-                            <span class="label__text">
-                                <span class="label__check">
-                                    <i class="fa fa-plus icon"></i>
-                                </span>
-                            </span>
-                        </label>
-                            </div>
+                            <div class="add-time-btn" id="add-time-<?php echo $row['id'];?>" onclick="addTime( '<?php echo $row['id'];?>' );"><i class="far fa-clock"></i></div>
                         </td>
                         <td>
                             <div class="delete-btn" id="<?php echo $row['id']; ?>">
-                                <div class="fa fa-trash"></div>
+                                <div class="far fa-trash-alt"></div>
                             </div>
                         </td>
                     </tr>
@@ -214,9 +206,9 @@ include('db_connection.php');
                 </div>
                 <div class="new-project-form-outer">
                     <br>Hours<br>
-                    <input type="number" name="add_time_hours" placeholder="Hours" id="add_time_hours" class="new_project_input">
+                    <input type="number" name="add_time_hours" placeholder="Hours" min="0" id="add_time_hours" class="new_project_input">
                     <br>Minutes<br>
-                    <input type="number" name="add_time_mins" placeholder="Minutes" id="add_time_mins" class="new_project_input">
+                    <input type="number" name="add_time_mins" max="60" min="0" placeholder="Minutes" id="add_time_mins" class="new_project_input">
                     <input type="submit" value="ADD TIME" class="submit-form" name="add_time_submit" id="add_time_submit" onclick="addTimeFunction()" class="new_project_submit">
                 </div>
             </div>

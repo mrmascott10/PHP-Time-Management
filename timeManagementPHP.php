@@ -11,8 +11,12 @@ if(isset($_POST['project_title'])) { // If it's for adding a new project
     $description = Trim(stripslashes($_POST['new_proj_description']));
     
     $insertNewProject = mysqli_query($mysqli, "INSERT INTO `jobs`(project_title, client_name, cost_hour, description, time_spent, time_spent_min, username_id) VALUES ('$project_title', '$client_name', '$cost_hour', '$description', '$time_spent', '$time_spent_min', 1)");
-} else {
+} elseif ($_POST['deleteVar'] == "varSet") {
     $jobId = mysqli_real_escape_string($mysqli, Trim(stripslashes(preg_replace('/[^0-9]/', '', $_POST['jobId']))));
     $sqlInsertDetails = mysqli_query($mysqli, "UPDATE `jobs` SET `deleted`=1 WHERE `id` = '$jobId';");
+} elseif ($_POST['addTimeVar'] == "addTimeVarSet") {
+    $add_time_hours = Trim(stripslashes($_POST['add_time_hours']));
+    $add_time_mins = Trim(stripslashes($_POST['add_time_mins']));    
+    
 }
 ?>
