@@ -71,7 +71,7 @@ include('db_connection.php');
                 </div>
                 <div class="dash-header-right">
                     <h2>Total Time:
-                        <?php 
+                        <?php
                         $total_time_sql = mysqli_query($mysqli, "SELECT SUM(time_spent) AS 'time_spent_hrs' FROM jobs WHERE deleted = '0';");
                         while($row = mysqli_fetch_array($total_time_sql)) {
                             $total_time_hrs = $row['time_spent_hrs'];
@@ -80,13 +80,13 @@ include('db_connection.php');
                         while($row = mysqli_fetch_array($total_time_min_sql)) {
                             $total_time_min = $row['time_spent_min'];
                         }
-                        
+
                         if($total_time_min > 60) {
                             $total_time_min_60 = ceil(($total_time_min - 60)/60);
                             $total_time_hrs += $total_time_min_60;
                             $total_time_min -= 60;
                         }
-                        
+
                         echo $total_time_hrs . " hrs " . $total_time_min . " min";
                         ?>
                     </h2>
@@ -103,7 +103,7 @@ include('db_connection.php');
                         <th>Add Time</th>
                         <th><i class="far fa-trash-alt"></i></th>
                     </tr>
-                    <?php 
+                    <?php
                     // NOTE: complete, done and deleted -> if they are 0 then they're not true, if they're a 1 then they're true.
                             $select_id_jobs = mysqli_query($mysqli, "SELECT id FROM users WHERE username='$login_user'");
                         while($row = mysqli_fetch_array($select_id_jobs)) {
@@ -196,12 +196,12 @@ include('db_connection.php');
             </div>
         </div>
         <!--  NEW PROJECT MODAL END  -->
-        
+
         <!--  ADD TIME MODAL START  -->
         <div id="addTimeModal" class="new_project_modal">
             <div class="new_project_modal_content">
                 <div class="new_project_header">
-                    <span class="new_project_close fa fa-times"></span>
+                    <span id="add_time_close" class="fa fa-times"></span>
                     <h2>Add Timing</h2>
                 </div>
                 <div class="new-project-form-outer">
